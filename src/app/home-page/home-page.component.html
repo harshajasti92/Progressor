@@ -1,0 +1,44 @@
+<h1 style="text-align:center; background-color:lightgrey">Carousel goes here</h1>
+<h3>Questions</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width:10%">#</th>
+      <th style="width:50%">Question</th>
+      <th style="width:40%">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of data; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{x.question}}</td>
+      <td>
+        <span><input type="checkbox" id="optionA" (click)=optionA(x)>{{x.options.a}}</span>
+        <span style="padding-left:25px"><input type="checkbox" id="optionB">{{x.options.b}}</span>
+        <span style="padding-left:25px"><input type="checkbox" id="optionC">{{x.options.c}}</span>
+        <span style="padding-left:25px"><input type="checkbox" id="optionD">{{x.options.d}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="jumbotron">
+  Seperate
+</div>
+
+<div class="col-md-12" *ngFor="let x of data; let i = index" style="display: flex; align-items:center">
+  <div class="col-md-1" style="display:inline-bloc">
+    {{i+1}}
+  </div>
+  <div class="col-md-6" style="display:inline-block">
+    {{x.question}}
+  </div>
+  <div class="col-md-5" style="display:inline-block">
+    <input type="checkbox" class="form-check-input" id="optionA" (click)=optionA(x)>{{x.options.a}}<br>
+    <input type="checkbox" class="form-check-input" id="optionB">{{x.options.b}}<br>
+    <input type="checkbox" class="form-check-input" id="optionC">{{x.options.c}}<br>
+    <input type="checkbox" class="form-check-input" id="optionD">{{x.options.d}}<br>
+  </div>
+
+</div>
