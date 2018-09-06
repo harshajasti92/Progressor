@@ -18,7 +18,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.data);
-    console.log(this.data.options);
+    // console.log(this.data.options);
   }
 
   optionA(x){
